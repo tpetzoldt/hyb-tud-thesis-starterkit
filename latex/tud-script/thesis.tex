@@ -1,4 +1,4 @@
-\documentclass[english,ngerman,BCOR=6mm,cdgeometry=no,DIV=13]{tudscrreprt}
+\documentclass[english,ngerman,BCOR=6mm,cdgeometry=no,parskip=half,DIV=13]{tudscrreprt}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -94,9 +94,6 @@ At vero eos et accusam et justo duo dolores et ea rebum.
 Diese Formatvorlage basiert auf der srcreprt-Klasse aus dem TUD-Script-Paket von
 Falk Hanisch.
 
-Es fehlen noch Beispiele für Maßeinheiten und chemische Formeln, außerdem soll
-noch eine englische Variante erstellt werden.
-
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
@@ -110,7 +107,7 @@ sanctus est Lorem ipsum dolor sit amet (siehe Abbildung \ref{fig:fig_1}).
 
 \section{Untersuchungsgebiet}
 
-Mit bibLaTeX werden aktive Zitate (auch narrativ genannt) mit \texttt{\textbackslash cite\{\}}: \cite{r-core-2024} und passive Zitate (auch eingeklammert genannt) mit \texttt{\textbackslash parencite\{\}}: \parencite{r-core-2024}, gesetzt.
+Mit bibLaTeX werden aktive Zitate (auch narrativ genannt) mit \texttt{\textbackslash cite\{\}}: \cite{r-core-2024} und passive Zitate (auch eingeklammert genannt) mit \texttt{\textbackslash parencite\{\}} gesetzt: \parencite{r-core-2024}.
 
 \section{Gewässerbewertung}
 
@@ -134,6 +131,16 @@ Für Gleichungen mit mehreren Zeilen eignet sich die \texttt{align} Umgebung gut
 f(S) &= r_{max} \cdot \frac{S}{k_S + S}
 \end{align}
 
+Für Maßeinheiten und chemische Formeln existieren unterschiedliche Methoden. Einfach und pragmatisch ist die Kombination aus Mathematikmodus (mit \verb#$$#) und \verb#mathrm{}#, damit die Maßeinheiten nicht kursiv gesetzt werden.
+
+
+Code: \verb#$\mathrm{\mu g L^{-1}}$, $\mathrm{PO_4^{3-}}$#
+
+Ergebnis: $\mathrm{\mu g L^{-1}}$, $\mathrm{PO_4^{3-}}$
+
+Das funktioniert soweit, gilt aber typografisch als nicht ganz sauber. Stattdessen werden die Pakete
+\textbf{siunitx} und \textbf{mchem} empfohlen.
+
 
 \section{Statistische Analyse}
 
@@ -147,6 +154,8 @@ wurde das Paket \textbf{ggplot2} verwendet \parencite{wickham-ggplot2-2016}.
 Test von Umlauten und Sonderzeichen äöü ÄÖÜ ßßß µ @ €. Dieser Test soll zeigen,
 ob die Schriftarten richtig funktionieren, wenn der Text im UTF-8-Format
 abgespeichert wurde.
+
+
 
 \begin{figure}
 	\centering
@@ -167,6 +176,7 @@ abgespeichert wurde.
 		Trübung & 3 & 15 \\ \hline
 	\end{tabular}
 \end{table}
+
 
 \chapter{Diskussion}
 
