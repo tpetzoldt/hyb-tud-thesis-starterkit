@@ -114,7 +114,18 @@ sanctus est Lorem ipsum dolor sit amet (siehe Abbildung \ref{fig:fig_1}).
 
 \section{Untersuchungsgebiet}
 
+Mit bibLaTeX werden aktive Zitate (auch narrativ genannt) mit \texttt{\textbackslash cite\{\}}: \cite{r-core-2024} und passive Zitate (auch eingeklammert genannt) mit \texttt{\textbackslash parencite\{\}}: \parencite{r-core-2024}, gesetzt.
+
 \section{Gewässerbewertung}
+
+Mathemathische Gleichungen und Formeln können mit der \texttt{equation} Umgebung gesetzt werden:
+
+\begin{equation}
+	y = \alpha + \beta \cdot x + \epsilon
+\end{equation}
+
+Für Gleichugen mit mehreren Zeilen eignet sich die \texttt{align} Umgebung gut.
+
 
 \section{Statistische Analyse}
 
@@ -151,12 +162,14 @@ abgespeichert wurde.
 
 \chapter{Diskussion}
 
-Hier werden die Aufgaben udn Hypothesen aus der Einleitung aufgegriffen und
+Hier werden die Aufgaben und Hypothesen aus der Einleitung aufgegriffen und
 argumentativ untersetzt. Potentielle Defizite und Fehler werden eingeräumt und
 eingeordnet. Es sollte das Positive herausgerabeitet werden, außer wenn alles
 schief gegangen ist.
 
-\chapter{Danksagung}
+\chapter*{Danksagung} % \chapter*{} erzeugt keine Nummerrierung für das Kapitel und keinen Eintrag im Inhaltsverzeichnis
+\addcontentsline{toc}{chapter}{Danksagung} % Ergänzt die Danksagung im Inhaltsverzeichnis
+
 
 Die Danksagung kann individuell gestaltet werden. Wichtig ist vor allem,
 Praxispartnern zu danken und den Leuten oder Organisationen, von denen man
@@ -166,6 +179,22 @@ vorgeschrieben.
 
 
 \printbibliography
+
+
+% Falls ein Anhang gewünscht ist kann dieser hier ergänzt werden. Die Kapitel Nummerrierung wird für
+% den Anhang auf Buchstaben geändert
+
+\setcounter{chapter}{0}
+\renewcommand\thechapter{\Alph{chapter}}
+\chapter{Anhang}
+
+Falls ein Anhang nötig ist kann dieser hier ergänzt werden
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{pdf-plot.pdf}
+	\caption[kurze Beschreibung für die Liste der Abbildungen]{Lange Beschreibung für den Fließtext}
+\end{figure}
+
 
 
 \end{document}
