@@ -110,11 +110,30 @@ sanctus est Lorem ipsum dolor sit amet (siehe Abbildung \ref{fig:fig_1}).
 
 \section{Untersuchungsgebiet}
 
+Mit bibLaTeX werden aktive Zitate (auch narrativ genannt) mit \texttt{\textbackslash cite\{\}}: \cite{r-core-2024} und passive Zitate (auch eingeklammert genannt) mit \texttt{\textbackslash parencite\{\}}: \parencite{r-core-2024}, gesetzt.
+
 \section{Gewässerbewertung}
 
 \subsection{Vor-Ort-Verfahren}
 
 \subsection{Auswertung von Satellitendaten}
+
+\subsection{Berechnungen}
+
+Mathemathische Gleichungen und Formeln können mit der \texttt{equation} Umgebung gesetzt werden:
+
+\begin{equation}
+	y = \alpha + \beta \cdot x + \epsilon
+\end{equation}
+
+Für Gleichungen mit mehreren Zeilen eignet sich die \texttt{align} Umgebung gut, bei der man z.B. das Gleichheitszeichen untereinander ausrichten kann.
+
+\begin{align}
+\frac{dP}{dt} &= r \cdot f(S) \cdot P \\
+\frac{dS}{dt} &= - \frac{1}{Y} \cdot P \\
+f(S) &= r_{max} \cdot \frac{S}{k_S + S}
+\end{align}
+
 
 \section{Statistische Analyse}
 
@@ -156,7 +175,9 @@ argumentativ untersetzt. Potentielle Defizite und Fehler werden eingeräumt und
 eingeordnet. Es sollte das Positive herausgearbeitet werden, außer wenn alles
 schief gegangen ist, was selten der Fall ist.
 
-\chapter{Danksagung}
+\chapter*{Danksagung} % \chapter*{} erzeugt keine Nummerrierung für das Kapitel und keinen Eintrag im Inhaltsverzeichnis
+\addcontentsline{toc}{chapter}{Danksagung} % Ergänzt die Danksagung im Inhaltsverzeichnis
+
 
 Die Danksagung kann individuell gestaltet werden. Wichtig ist vor allem,
 Praxispartnern zu danken und den Leuten oder Organisationen, von denen man
@@ -166,6 +187,22 @@ vorgeschrieben.
 
 
 \printbibliography
+
+
+% Falls ein Anhang gewünscht ist kann dieser hier ergänzt werden. Die Kapitel Nummerrierung wird für
+% den Anhang auf Buchstaben geändert
+
+\setcounter{chapter}{0}
+\renewcommand\thechapter{\Alph{chapter}}
+\chapter{Anhang}
+
+Falls ein Anhang nötig ist kann dieser hier ergänzt werden
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{pdf-plot.pdf}
+	\caption[kurze Beschreibung für die Liste der Abbildungen]{Lange Beschreibung für den Fließtext}
+\end{figure}
+
 
 
 \end{document}
