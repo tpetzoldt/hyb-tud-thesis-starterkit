@@ -1,0 +1,156 @@
+---
+title: "Die Rolle der Bakterien beim DNA-Abbau im Gewässer"
+author: "Silke Musterfrau"
+abstract: "
+  \\textbf{Abstract:}
+  The English abstract should briefly summarize task, methods and main results.
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  At vero eos et accusam et justo duo dolores et ea rebum.\\
+  
+
+  \\textbf{Zusammenfassung:}
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+  tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  At vero eos et accusam et justo duo dolores et ea rebum."
+
+pdf-engine: pdflatex
+
+format: 
+  pdf: 
+    #template: tudscr-template.tex
+    documentclass: tudscrreprt
+    #documentclass: tudscrartcl
+    top-level-division: chapter
+    papersize: a4
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    lof: true #Abbildungsverzeichnis
+    lot: true #Tabellenverzeichnis
+    #mainfont: "Open Sans"
+    fontsize: 11pt
+    linestretch: 1.2
+    #geometry: left=2.5cm,right=2.5cm,top=3cm,bottom=3cm
+    latex-auto-install: true
+    keep-tex: true
+    include-in-header: 
+      text: |
+        \faculty{Fakultät Umweltwissenschaften}
+        \department{Fachrichtung Hydrowissenschaften}
+        \institute{Institut für Hydrobiologie}
+        \chair{Professur für Limnologie (Gewässerökologie)}
+        \author{Lisa Wasseramsel}
+        \course{M.Sc. Hydrobiologie}
+        \subject{Berufspraktikumsbericht} % Zeile bei Bachelor- und Masterarbeiten ändern oder löschen
+        \graduation[M.Sc.]{Master of Science}
+        \dateofbirth{02.01.2001}  % Optional
+        \placeofbirth{Dresden}    % Optional
+        \referee{Prof. Annegret Clearwater (TU Dresden)\and Dr. Michael Fischer (Umweltforschungszentrum)}
+        \supervisor{Dipl.-Biol. Luise Salomo, MSc. Axel Adam}
+        \defensedate{10.09.2024}  % Optional
+
+knitr:
+  opts_chunk:
+    message: false
+lang: de
+date: today
+date-format: "D. MMMM YYYY"
+bibliography: references.bib
+csl: apa.csl
+---
+
+<!--
+\maketitle
+-->
+
+\faculty{Fakultät Umweltwissenschaften}
+\department{Fachrichtung Hydrowissenschaften}
+\institute{Institut für Hydrobiologie}
+\chair{Professur für Limnologie (Gewässerökologie)}
+
+
+# Einleitung
+
+## Stand der Technik
+
+Quarto  [@Quarto2024] ist ein Textsatzsystem bei dem man Code verschiedener Skriptsprachen 
+direkt einbetten kann, z.B. R [@RCore2024], Python oder Julia. Dies ermöglicht
+es, Berechnungen und statistische Analysen direkt im Textdokument durchführen 
+zu lassen und Grafiken direkt an Ort und Stelle zu erzeugen.
+
+Der Output kann in HTML, Word, oder als PDF erfolgen. Hierbei bietet es sich an, 
+zunächst mit HTML zu arbeiten, weil dies schneller und unkomplizierter funktioniert.
+Für die Endversion benutzt man dann Word oder PDF.
+
+## Zielstellung
+
+Es sollte eine Formatvorlage in Quarto erstellt werden, aus der mit Hilfe des 
+Latex-Systems [@latex-manual] ein PDF erzeigt werden kann. Als Basis sollte das 
+Corporate Design der TU Dresden in Form eines Vorhandenen Latex-Klasse verwendet werden.
+Das Ergebnis soll möglichst professionell aussehen, allerdings erfordert dies 
+etwas komplexere Einstellungen als bei einer Ausgabe in HTML oder Word.
+
+## Lösungsweg
+
+Als Basis wurde das Latex-Paket **tudscr** von Falk Hanisch verwendet ([https://github.com/tud-cd/tudscr](https://github.com/tud-cd/tudscr)).
+
+Bei der Einbindung in Quarto zeigte sich, dass die aktuelle Version nicht mit dem
+bei Quarto standardmäßigen **xelatex** kompatibel ist, höchstwahrscheinlich auf Grund
+eingeschränkter oder fehlender Unicode-Kompatibilität. Als Layout-Engine muss deshalb 
+**pdflatex** verwendet werden.
+
+
+
+# Methoden
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+# Ergebnisse
+
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+
+```{r tabelle, echo=FALSE}
+#| label: tbl-beispieltabelle
+#| tbl-cap: Tabelle aus einem R-Beispieldatensatz.
+knitr::kable(iris[1:10,])
+```
+
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+::: {#fig-external-figure}
+![Elephant](pdf-plot.pdf)
+Eingebettete Abbildung, z.B. ein Foto.
+:::
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+
+```{r histogramm, echo=FALSE}
+#| label: fig-histogram
+#| fig-cap: Histogramm von 100 Zufallszahlen
+hist(rnorm(100))
+```
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+
+# Diskussion
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+
+# Literatur
+
