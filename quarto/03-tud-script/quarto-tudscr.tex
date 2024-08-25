@@ -195,7 +195,7 @@
 
 \title{Die Rolle der Bakterien beim DNA-Abbau im Gewässer}
 \author{Silke Musterfrau}
-\date{24. August 2024}
+\date{25. August 2024}
 
 \begin{document}
 \maketitle
@@ -206,10 +206,11 @@ sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
 dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
 justo duo dolores et ea rebum.\\
 \strut \\
-\textbf{Zusammenfassung:} Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-justo duo dolores et ea rebum.
+\textbf{Zusammenfassung:} Die Zusammenfassung soll die Aufgabe, die
+Methoden und die wichtigsten Ergebnisse kurz zusammenfassen. Lorem ipsum
+dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 \end{abstract}
 
 \renewcommand*\contentsname{Inhaltsverzeichnis}
@@ -244,7 +245,7 @@ oder PDF.
 \section{Zielstellung}\label{zielstellung}
 
 Es sollte eine Formatvorlage in Quarto erstellt werden, aus der mit
-Hilfe des Latex-Systems (Lamport, 2005) ein PDF erzeigt werden kann. Als
+Hilfe des Latex-Systems (Lamport, 2005) ein PDF erzeugt werden kann. Als
 Basis sollte das Corporate Design der TU Dresden in Form eines
 Vorhandenen Latex-Klasse verwendet werden. Das Ergebnis soll möglichst
 professionell aussehen, allerdings erfordert dies etwas komplexere
@@ -257,7 +258,7 @@ verwendet (\url{https://github.com/tud-cd/tudscr}).
 
 Bei der Einbindung in Quarto zeigte sich, dass die aktuelle Version
 nicht mit dem bei Quarto standardmäßigen \textbf{xelatex} kompatibel
-ist, höchstwahrscheinlich auf Grund eingeschränkter oder fehlender
+ist, eventuell auf Grund eingeschränkter oder fehlender
 Unicode-Kompatibilität. Als Layout-Engine muss deshalb \textbf{pdflatex}
 verwendet werden.
 
@@ -333,13 +334,17 @@ est Lorem ipsum dolor sit amet.
 
 \centering{
 
-\captionsetup{labelsep=none}\includegraphics{pdf-plot.pdf}
+\includegraphics[width=0.6\textwidth,height=\textheight]{mountains.jpg}
 
 }
 
-\caption{\label{fig-external-figure}}
+\caption{\label{fig-mountains}Gebirgslandschaft in den Dolomiten}
 
 \end{figure}%
+
+In Quarto lassen sich externe Bilder und Grafiken im jpg, png oder
+pdf-Format einbetten und auch referenzieren
+(Abbildung~\ref{fig-mountains}).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
 eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -405,7 +410,8 @@ est Lorem ipsum dolor sit amet.
 
 }
 
-\caption{\label{fig-histogram}Histogramm von 100 Zufallszahlen}
+\caption[1000 Zufallszahlen]{\label{fig-histogram}Histogramm aus 1000
+standardnormalverteilten Zufallszahlen}
 
 \end{figure}%
 
@@ -430,13 +436,27 @@ molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
 eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
 zzril delenit augue duis dolore te feugait nulla facilisi.
 
+\chapter*{Danksagung}\label{danksagung}
+\addcontentsline{toc}{chapter}{Danksagung}
+
+Hier ist es besonders wichtig, Kooperations- und Praxispartnern zu
+danken, von denen man Unterstützung oder Daten erhalten hat. Bei
+Drittmittelfinanzierung muss der Fördermittelgeber und das
+Förderkennzeichen angegeben werden.
+
+\chapter*{Selbständigkeitserklärung}\label{selbstuxe4ndigkeitserkluxe4rung}
+\addcontentsline{toc}{chapter}{Selbständigkeitserklärung}
+
+Bei Prüfungs- und Abschlussarbeiten muss im Regelfall eine
+Selbständigkeitserklärung angegeben werden.
+
 \chapter*{Literatur}\label{literatur}
 \addcontentsline{toc}{chapter}{Literatur}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-latex-manual}
-Lamport, L. (2005). \emph{The LaTeX Manual} (2nd Aufl.). {American
+Lamport, L. (2005). \emph{The LaTeX Manual. 2nd edition.} {American
 Mathematical Society}.
 
 \bibitem[\citeproctext]{ref-RCore2024}
@@ -446,7 +466,7 @@ Computing}. R Foundation for Statistical Computing.
 
 \bibitem[\citeproctext]{ref-Quarto2024}
 RStudio Team. (2024). \emph{Quarto: A Publishing Platform} (Version
-1.4.554) {[}Computer software{]}. \url{https://quarto.org}
+1.4.554). \url{https://quarto.org}
 
 \end{CSLReferences}
 

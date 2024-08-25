@@ -10,30 +10,30 @@ abstract: "
   
 
   \\textbf{Zusammenfassung:}
+  Die Zusammenfassung soll die Aufgabe, die Methoden und die wichtigsten Ergebnisse 
+  kurz zusammenfassen.
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
   At vero eos et accusam et justo duo dolores et ea rebum."
 
-pdf-engine: pdflatex
+pdf-engine: pdflatex # weil tud-script nicht mit xelatex-default kompatibel
 
 format: 
   pdf: 
-    #template: tudscr-template.tex
     documentclass: tudscrreprt
-    #documentclass: tudscrartcl
     top-level-division: chapter
     papersize: a4
     number-sections: true
     toc: true
     toc-depth: 3
-    lof: true #Abbildungsverzeichnis
-    lot: true #Tabellenverzeichnis
+    lof: true # Abbildungsverzeichnis
+    lot: true # Tabellenverzeichnis
     #mainfont: "Open Sans"
     fontsize: 11pt
     linestretch: 1.2
-    #geometry: left=2.5cm,right=2.5cm,top=3cm,bottom=3cm
+    #geometry: left=2.5cm,right=2.5cm,top=3cm,bottom=3cm # nicht kompatibel
     latex-auto-install: true
-    keep-tex: true
+    keep-tex: true # fuer's debugging
     include-in-header: 
       text: |
         \faculty{Fakultät Umweltwissenschaften}
@@ -57,12 +57,9 @@ lang: de
 date: today
 date-format: "D. MMMM YYYY"
 bibliography: references.bib
+# https://www.zotero.org/styles/apa  Bibliograpie-Stile nach APA 7th edition
 csl: apa.csl
 ---
-
-<!--
-\maketitle
--->
 
 \faculty{Fakultät Umweltwissenschaften}
 \department{Fachrichtung Hydrowissenschaften}
@@ -86,7 +83,7 @@ Für die Endversion benutzt man dann Word oder PDF.
 ## Zielstellung
 
 Es sollte eine Formatvorlage in Quarto erstellt werden, aus der mit Hilfe des 
-Latex-Systems [@latex-manual] ein PDF erzeigt werden kann. Als Basis sollte das 
+Latex-Systems [@latex-manual] ein PDF erzeugt werden kann. Als Basis sollte das 
 Corporate Design der TU Dresden in Form eines Vorhandenen Latex-Klasse verwendet werden.
 Das Ergebnis soll möglichst professionell aussehen, allerdings erfordert dies 
 etwas komplexere Einstellungen als bei einer Ausgabe in HTML oder Word.
@@ -96,7 +93,7 @@ etwas komplexere Einstellungen als bei einer Ausgabe in HTML oder Word.
 Als Basis wurde das Latex-Paket **tudscr** von Falk Hanisch verwendet ([https://github.com/tud-cd/tudscr](https://github.com/tud-cd/tudscr)).
 
 Bei der Einbindung in Quarto zeigte sich, dass die aktuelle Version nicht mit dem
-bei Quarto standardmäßigen **xelatex** kompatibel ist, höchstwahrscheinlich auf Grund
+bei Quarto standardmäßigen **xelatex** kompatibel ist, eventuell auf Grund
 eingeschränkter oder fehlender Unicode-Kompatibilität. Als Layout-Engine muss deshalb 
 **pdflatex** verwendet werden.
 
@@ -123,10 +120,9 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-::: {#fig-external-figure}
-![Elephant](pdf-plot.pdf)
-Eingebettete Abbildung, z.B. ein Foto.
-:::
+![Gebirgslandschaft in den Dolomiten](mountains.jpg){#fig-mountains width=60% fig-align="center" fig-alt="Gebirgslandschaft in den Dolomiten. Im Vordergrund Wiesen, dann Fichten, spitze Dolomitenfelsen und darüber ein blauer Himmel"}
+
+In Quarto lassen sich externe Bilder und Grafiken im jpg, png oder pdf-Format einbetten und auch referenzieren (@fig-mountains).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
@@ -140,8 +136,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ```{r histogramm, echo=FALSE}
 #| label: fig-histogram
-#| fig-cap: Histogramm von 100 Zufallszahlen
-hist(rnorm(100))
+#| fig-cap: Histogramm aus 1000 standardnormalverteilten Zufallszahlen
+#| fig-scap: 1000 Zufallszahlen
+set.seed(42)
+hist(rnorm(1000), main="")
 ```
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
@@ -150,6 +148,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 # Diskussion
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+# Danksagung {.unnumbered}
+
+Hier ist es besonders wichtig, Kooperations- und Praxispartnern zu danken, von denen man Unterstützung oder Daten erhalten hat. Bei Drittmittelfinanzierung muss der Fördermittelgeber und das Förderkennzeichen angegeben werden. 
+
+# Selbständigkeitserklärung {.unnumbered}
+
+Bei Prüfungs- und Abschlussarbeiten muss im Regelfall eine Selbständigkeitserklärung angegeben werden.
 
 
 # Literatur
