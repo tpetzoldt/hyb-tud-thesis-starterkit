@@ -116,15 +116,14 @@
 \department{Fachrichtung Hydrowissenschaften}
 \institute{Institut für Hydrobiologie}
 \chair{Professur für Limnologie (Gewässerökologie)}
-\author{Lisa Wasseramsel}
 \course{M.Sc. Hydrobiologie}
 \subject{Berufspraktikumsbericht} % Zeile bei Bachelor- und Masterarbeiten ändern oder löschen
 \graduation[M.Sc.]{Master of Science}
-\dateofbirth{02.01.2001}  % Optional
-\placeofbirth{Dresden}    % Optional
+% \dateofbirth{02.01.2001}  % Optional
+% \placeofbirth{Dresden}    % Optional
 \referee{Prof. Annegret Clearwater (TU Dresden)\and Dr. Michael Fischer (Umweltforschungszentrum)}
 \supervisor{Dipl.-Biol. Luise Salomo, MSc. Axel Adam}
-\defensedate{10.09.2024}  % Optional
+% \defensedate{10.09.2024}  % Optional
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
@@ -183,7 +182,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Die Rolle der Bakterien beim DNA-Abbau im Gewässer},
+  pdftitle={Entwicklung einer Universalmethode zur Umsetzung der Wasserrahmenrichtlinie},
   pdfauthor={Silke Musterfrau},
   pdflang={de},
   colorlinks=true,
@@ -193,7 +192,8 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Die Rolle der Bakterien beim DNA-Abbau im Gewässer}
+\title{Entwicklung einer Universalmethode zur Umsetzung der
+Wasserrahmenrichtlinie}
 \author{Silke Musterfrau}
 \date{25. August 2024}
 
@@ -229,6 +229,12 @@ voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 
 \chapter{Einleitung}\label{einleitung}
 
+In der Einleitung beschreibt man zunächst den bekannten Kontext. Danach
+stellt man das zu lösende Problem dar. Es ist sehr wichtig, die
+wissenschaftliche oder methodische Fragstellung klar herauszuarbeiten.
+Falls möglich, sollte die Fragestellung als Hypothese formuliert werden.
+Anschließend leitet man ab, wie das Problem gelöst werden soll.
+
 \section{Stand der Technik}\label{stand-der-technik}
 
 Quarto (RStudio Team, 2024) ist ein Textsatzsystem bei dem man Code
@@ -253,7 +259,7 @@ Einstellungen als bei einer Ausgabe in HTML oder Word.
 
 \section{Lösungsweg}\label{luxf6sungsweg}
 
-Als Basis wurde das Latex-Paket \textbf{tudscr} von Falk Hanisch
+Als Basis wurde das Latex-Paket \textbf{tudscr} von Hanisch (2022)
 verwendet (\url{https://github.com/tud-cd/tudscr}).
 
 Bei der Einbindung in Quarto zeigte sich, dass die aktuelle Version
@@ -264,10 +270,71 @@ verwendet werden.
 
 \chapter{Methoden}\label{methoden}
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
-eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-zzril delenit augue duis dolore te feugait nulla facilisi.
+Im Methodenteil sollen die verwendeten Methoden nachvollziehbar
+vorgestellt werden. Eigene oder modifizierte Methoden müssen detailliert
+dargestellt werden. Bei Standardmethoden erläutert man mit einem oder
+wenigen Sätzen kurz das Grundprinzip und zitiert die Originalquelle der
+Methode.
+
+\section{Untersuchungsgebiet}\label{untersuchungsgebiet}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.
+
+\section{Gewässerbewertung}\label{gewuxe4sserbewertung}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.
+
+\subsection{Vor-Ort-Verfahren}\label{vor-ort-verfahren}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.
+
+\subsection{Analyse von
+Satellitendaten}\label{analyse-von-satellitendaten}
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.
+
+\subsection{Berechnungen}\label{berechnungen}
+
+Mathemathische Gleichungen und Formeln können in Quarto mit der
+\texttt{\$\$}-Umgebung gesetzt werden:
+
+\[
+    y = \alpha + \beta \cdot x + \epsilon
+\]
+
+Für Gleichungen mit mehreren Zeilen eignet sich die \texttt{align}
+Umgebung, bei der man z.B. das Gleichheitszeichen untereinander
+ausrichten kann.
+
+\begin{align}
+\frac{dP}{dt} &= r \cdot f(S) \cdot P \\
+\frac{dS}{dt} &= - \frac{1}{Y} \cdot P \\
+f(S)          &= r_{max} \cdot \frac{S}{k_S + S}
+\end{align}
+
+\section{Statistische Analyse}\label{statistische-analyse}
+
+Die statistische Analyse wurde mit dem R-System für Datenanalyse und
+Grafik (R Core Team, 2024) und der Benutzerumgebung RStudio (Posit Team,
+2024) durchgeführt. Falls spezielle Methoden verwendet wurden, werden
+diese zitiert bzw. erläutert. Es ist guter Stil, auch verwendete
+Softwarepakete (z.B. R- oder Pythonpakete) zu zitieren.
 
 \chapter{Ergebnisse}\label{ergebnisse}
 
@@ -278,8 +345,8 @@ zzril delenit augue duis dolore te feugait nulla facilisi.
 
 \begin{longtable}[]{@{}rrrrl@{}}
 
-\caption{\label{tbl-beispieltabelle}Tabelle aus einem
-R-Beispieldatensatz.}
+\caption{\label{tbl-beispieltabelle}Tabelle mit einem Ausschnitt aus
+einem R-Beispieldatensatz.}
 
 \tabularnewline
 
@@ -455,9 +522,18 @@ Selbständigkeitserklärung angegeben werden.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Hanisch2022}
+Hanisch, F. (2022). \emph{Ein LATEX-Bundle für Dokumente im Corporate
+Design der Technischen Universität Dresden. Benutzerhandbuch.} TU
+Dresden. \url{https://tug.org/docs/latex/tudscr/tudscr.pdf}
+
 \bibitem[\citeproctext]{ref-latex-manual}
 Lamport, L. (2005). \emph{The LaTeX Manual. 2nd edition.} {American
 Mathematical Society}.
+
+\bibitem[\citeproctext]{ref-RStudio2024}
+Posit Team. (2024). \emph{Rstudio: Integrated Development Environment
+for R}. Posit Software, PBC. \url{https://www.posit.co/}
 
 \bibitem[\citeproctext]{ref-RCore2024}
 R Core Team. (2024). \emph{R: A Language and Environment for Statistical

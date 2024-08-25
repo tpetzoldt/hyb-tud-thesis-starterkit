@@ -1,5 +1,5 @@
 ---
-title: "Die Rolle der Bakterien beim DNA-Abbau im Gewässer"
+title: "Entwicklung einer Universalmethode zur Umsetzung der Wasserrahmenrichtlinie"
 author: "Silke Musterfrau"
 abstract: "
   \\textbf{Abstract:}
@@ -40,15 +40,16 @@ format:
         \department{Fachrichtung Hydrowissenschaften}
         \institute{Institut für Hydrobiologie}
         \chair{Professur für Limnologie (Gewässerökologie)}
-        \author{Lisa Wasseramsel}
         \course{M.Sc. Hydrobiologie}
         \subject{Berufspraktikumsbericht} % Zeile bei Bachelor- und Masterarbeiten ändern oder löschen
         \graduation[M.Sc.]{Master of Science}
-        \dateofbirth{02.01.2001}  % Optional
-        \placeofbirth{Dresden}    % Optional
+        % \dateofbirth{02.01.2001}  % Optional
+        % \placeofbirth{Dresden}    % Optional
         \referee{Prof. Annegret Clearwater (TU Dresden)\and Dr. Michael Fischer (Umweltforschungszentrum)}
         \supervisor{Dipl.-Biol. Luise Salomo, MSc. Axel Adam}
-        \defensedate{10.09.2024}  % Optional
+        % \defensedate{10.09.2024}  % Optional
+  html:
+    embed-resources: true
 
 knitr:
   opts_chunk:
@@ -68,6 +69,12 @@ csl: apa.csl
 
 
 # Einleitung
+
+In der Einleitung beschreibt man zunächst den bekannten Kontext. Danach stellt 
+man das zu lösende Problem dar. Es ist sehr wichtig, die wissenschaftliche oder 
+methodische Fragstellung klar herauszuarbeiten. Falls möglich, sollte die 
+Fragestellung als Hypothese formuliert werden. Anschließend leitet man ab, wie 
+das Problem gelöst werden soll. 
 
 ## Stand der Technik
 
@@ -90,7 +97,7 @@ etwas komplexere Einstellungen als bei einer Ausgabe in HTML oder Word.
 
 ## Lösungsweg
 
-Als Basis wurde das Latex-Paket **tudscr** von Falk Hanisch verwendet ([https://github.com/tud-cd/tudscr](https://github.com/tud-cd/tudscr)).
+Als Basis wurde das Latex-Paket **tudscr** von @Hanisch2022 verwendet ([https://github.com/tud-cd/tudscr](https://github.com/tud-cd/tudscr)).
 
 Bei der Einbindung in Quarto zeigte sich, dass die aktuelle Version nicht mit dem
 bei Quarto standardmäßigen **xelatex** kompatibel ist, eventuell auf Grund
@@ -101,7 +108,45 @@ eingeschränkter oder fehlender Unicode-Kompatibilität. Als Layout-Engine muss 
 
 # Methoden
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Im Methodenteil sollen die verwendeten Methoden nachvollziehbar vorgestellt werden. Eigene oder modifizierte Methoden müssen detailliert dargestellt werden. Bei Standardmethoden erläutert man mit einem oder wenigen Sätzen kurz das Grundprinzip und zitiert die Originalquelle der Methode.
+
+## Untersuchungsgebiet
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+## Gewässerbewertung
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+### Vor-Ort-Verfahren
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+### Analyse von Satellitendaten
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+### Berechnungen
+
+Mathemathische Gleichungen und Formeln können in Quarto mit der `$$`-Umgebung gesetzt werden:
+
+$$
+	y = \alpha + \beta \cdot x + \epsilon
+$$
+
+Für Gleichungen mit mehreren Zeilen eignet sich die \texttt{align} Umgebung, bei der man z.B. das Gleichheitszeichen untereinander ausrichten kann.
+
+\begin{align}
+\frac{dP}{dt} &= r \cdot f(S) \cdot P \\
+\frac{dS}{dt} &= - \frac{1}{Y} \cdot P \\
+f(S)          &= r_{max} \cdot \frac{S}{k_S + S}
+\end{align}
+
+
+
+## Statistische Analyse
+
+Die statistische Analyse wurde mit dem R-System für Datenanalyse und Grafik [@RCore2024] und der Benutzerumgebung RStudio [@RStudio2024] durchgeführt. Falls spezielle Methoden verwendet wurden, werden diese zitiert bzw. erläutert. Es ist guter Stil, auch verwendete Softwarepakete (z.B. R- oder Pythonpakete) zu zitieren.
 
 # Ergebnisse
 
@@ -111,7 +156,7 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 
 ```{r tabelle, echo=FALSE}
 #| label: tbl-beispieltabelle
-#| tbl-cap: Tabelle aus einem R-Beispieldatensatz.
+#| tbl-cap: Tabelle mit einem Ausschnitt aus einem R-Beispieldatensatz.
 knitr::kable(iris[1:10,])
 ```
 
