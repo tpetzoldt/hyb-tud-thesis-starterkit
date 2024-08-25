@@ -41,13 +41,20 @@ format:
         \institute{Institut für Hydrobiologie}
         \chair{Professur für Limnologie (Gewässerökologie)}
         \course{M.Sc. Hydrobiologie}
-        \subject{Berufspraktikumsbericht} % Zeile bei Bachelor- und Masterarbeiten ändern oder löschen
+        \subject{Berufspraktikumsbericht}
         \graduation[M.Sc.]{Master of Science}
-        % \dateofbirth{02.01.2001}  % Optional
-        % \placeofbirth{Dresden}    % Optional
-        \referee{Prof. Annegret Clearwater (TU Dresden)\and Dr. Michael Fischer (Umweltforschungszentrum)}
+
+        % \dateofbirth{02.01.2001}  % optional
+        % \placeofbirth{Dresden}    % optional
+        % \defensedate{10.09.2024}  % optional
+        
+        \referee{Prof. Annegret Clearwater (TU Dresden)\and
+          Dr. Michael Fischer (Umweltforschungszentrum)}
         \supervisor{Dipl.-Biol. Luise Salomo, MSc. Axel Adam}
-        % \defensedate{10.09.2024}  % Optional
+
+        % die folgenden Pakete muss man bei Bedarf installieren
+        % \usepackage{mhchem}  % optional fuer chemische Formeln, 
+        % \usepackage{siunitx} % optional fuer Masseinheiten
   html:
     embed-resources: true
 
@@ -126,7 +133,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-### Berechnungen
+## Berechnungen
 
 Mathemathische Gleichungen und Formeln können in Quarto mit der `$$`-Umgebung gesetzt werden:
 
@@ -142,6 +149,24 @@ Für Gleichungen mit mehreren Zeilen eignet sich die \texttt{align} Umgebung, be
 f(S)          &= r_{max} \cdot \frac{S}{k_S + S}
 \end{align}
 
+Für normale Hoch- und Tiefstellungen sollte man in Quarto möglichst nicht den Formel-Modus von Latex verwenden sondern die entsprechende Markdown-Auszeichnung:
+
+Beispiele: Hoch^1^ und Tiefstellung~2~, µg L^-1^
+
+Bei chemischen Formeln ist das nicht ganz optimal, genügt aber durchaus für Praktikumsarbeiten:
+Ca(HCO~3~)~2~, PO~4~^3-^. Für höhere Ansprüche kann man die Latex-Pakete **siunitx** und **mhchem** verwenden. 
+
+<!--
+:
+
+\unit{mg.L^{-1}}, \unit{\micro.E.m^{-2}.s^{-1}}
+
+\ce{PO_4^{3-}}, \ce{C6H5-CHO}
+
+\ce{$A$ ->[\ce{+H2O}] $B$}
+
+\ce{SO4^2- + Ba^2+ -> BaSO4 v}
+-->
 
 
 ## Statistische Analyse
