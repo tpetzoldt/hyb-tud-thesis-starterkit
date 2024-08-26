@@ -44,7 +44,7 @@ Die Vorlagen basieren auf dem LaTeX-Paket "TUD-Script" von Falk Hanisch (https:/
     
 ### Schritt 4: Öffne die Vorlagendatei
 
-* Fertige eine Kopie der Vorlagendatei an (erkennbar an "template" im Namen)
+* Fertige eine Kopie der Vorlagendatei an (erkennbar an "template-" im Namen)
 * Öffne die Datei in Word, TexStudio oder RStudio
 * Lies die Hinweise im Template
 * Beginne mit dem Schreiben
