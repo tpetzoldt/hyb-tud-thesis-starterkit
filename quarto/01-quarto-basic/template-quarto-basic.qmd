@@ -1,0 +1,90 @@
+---
+title: "Die Rolle der Bakterien beim DNA-Abbau im Gewässer"
+author: "Silke Musterfrau"
+format:
+  html:
+    toc: false #Inhaltsverzeichnis
+    toc-depth: 3
+    lof: false #Abbildungsverzeichnis
+    lot: false #Tabellenverzeichnis
+    embed-resources: true
+  pdf: 
+    papersize: a4
+    number-sections: true
+    toc: false #Inhaltsverzeichnis
+    toc-depth: 3
+    lof: false #Abbildungsverzeichnis
+    lot: false #Tabellenverzeichnis
+    linestretch: 1.2
+  docx: 
+    papersize: a4
+    number-sections: true
+    toc: false #Inhaltsverzeichnis
+    toc-depth: 3
+    lof: false #Abbildungsverzeichnis
+    lot: false #Tabellenverzeichnis
+    linestretch: 1.2
+
+knitr:
+  opts_chunk:
+    message: false
+lang: de
+date: today
+date-format: "D. MMMM YYYY"
+bibliography: references.bib
+csl: apa.csl
+---
+
+# Einleitung
+
+Dieses Dokument ist mit Quarto erstellt [@Quarto2024], einem Textsatzsystem in dem man
+Code in R [@RCore2024], Python und einigen anderen Skriptsprachen direkt einbetten kann.
+Mit Hilfe der vorliegenden Formatvorlage, kann Output im HTML-, Word- oder PDF-Format 
+erzeugt werden.
+
+
+# Methoden
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+# Ergebnisse
+
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+![Gebirgslandschaft in den Dolomiten](mountains.jpg){#fig-mountains width=60% fig-align="center" fig-alt="Gebirgslandschaft in den Dolomiten. Im Vordergrund Wiesen, dann Fichten, spitze Dolomitenfelsen und darüber ein blauer Himmel"}
+
+
+```{r tabelle, echo=FALSE}
+#| label: tbl-beispieltabelle
+#| tbl-cap: Tabelle aus einem R-Beispieldatensatz.
+knitr::kable(iris[1:10,])
+```
+
+
+```{r histogramm, echo=FALSE}
+#| label: fig-histogram
+#| fig-cap: Histogramm von 100 Zufallszahlen
+hist(rnorm(100))
+```
+
+
+# Diskussion
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+# Danksagung
+
+# Selbständigkeitserklärung
+
+# Literatur
+

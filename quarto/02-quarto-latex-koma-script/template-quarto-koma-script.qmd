@@ -1,0 +1,128 @@
+---
+title: "Entwicklung einer Universalmethode zur Umsetzung der Wasserrahmenrichtlinie"
+author: "Silke Musterfrau"
+format: 
+  pdf: 
+    documentclass: scrartcl
+    papersize: a4
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    lof: true #Abbildungsverzeichnis
+    lot: true #Tabellenverzeichnis
+    mainfont: "Open Sans"
+    fontsize: 11pt
+    linestretch: 1.2
+    geometry: left=2.5cm,right=2.5cm,top=3cm,bottom=3cm
+knitr:
+  opts_chunk:
+    message: false
+
+lang: de
+date: today
+date-format: "D. MMMM YYYY"
+bibliography: references.bib
+csl: apa.csl
+---
+
+# Einleitung
+
+Dieses Dokument ist mit Quarto erstellt [@Quarto2024], einem
+Textsatzsystem in dem man Code in R [@RCore2024], Python und einigen
+anderen Skriptsprachen direkt einbetten kann.  Der Output kann in
+HTML, Word, oder als PDF erfolgen. Die vorliegende Formatvorlage
+erzeugt PDFs mit Hilfe des Latex-Systems [@latex-manual]. Das Ergebnis
+kann sehr professionell aussehen, ist aber komplexer als die Ausgabe
+in HTML oder Word.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.
+
+# Methoden
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+# Ergebnisse
+
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+
+```{r tabelle, echo=FALSE}
+#| label: tbl-beispieltabelle
+#| tbl-cap: Tabelle aus einem R-Beispieldatensatz.
+knitr::kable(iris[1:10,])
+```
+
+
+```{r histogramm, echo=FALSE}
+#| label: fig-histogram
+#| fig-cap: Histogramm von 100 Zufallszahlen
+hist(rnorm(100))
+```
+
+
+# Diskussion
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+
+# Danksagung
+
+
+# Selbständigkeitserklärung
+
+
+# Literatur
+
