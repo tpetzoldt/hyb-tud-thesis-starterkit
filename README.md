@@ -1,4 +1,6 @@
+<div style="text-align: right;">
 [ 🇬🇧 English](/README-en.md)
+</div>
 
 # hyb-tud-thesis-starterkit
 
