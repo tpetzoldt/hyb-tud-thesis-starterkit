@@ -45,6 +45,19 @@ The templates are based on the LaTeX package "TUD-Script" by Falk Hanisch (https
     * Use the package manager of TexLive or Miktex and install the package **tudscr**
     * The documentation can be found at: https://github.com/tud-cd/tudscr
     
+**Important:** 
+
+Please download always the complete folder, not only the `template-*` file.
+
+* `tudcolory.sty`: Color schemes of the TU Dresden
+* `apa.csl`: Bibliography style according to the American Psychological Association (APA)
+* `references.bib` is an example of a literature database in BibTex format. 
+It can be created by hand or exported from a literature program, e.g. [Zotero](https://www.zotero.org/).
+* The files `pdf-plot.pdf` and `mountains.jpg` are example graphics. 
+Your own graphics can also be organized in subdirectories.
+
+Translated with DeepL.com (free version)    
+    
 ### Step 4: Open the template file
 
 * Make a copy of the template file (recognizable by “template-” in the name)

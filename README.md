@@ -36,6 +36,19 @@ Die Vorlagen basieren auf dem LaTeX-Paket "TUD-Script" von Falk Hanisch (https:/
 * Lade das gesamte Repository oder einen Teil davon über den **Code**-Button als ZIP-Datei herunter.
 * Experte: clone das Repository mit `git`.
 
+**Wichtig:** 
+
+Zusätzlich zur `template-*`-Datei sind bei LaTeX und Quarto gegebenenfalls 
+weitere Dateien erforderlich. Deshalb bitte immer einen ganzen Ordner 
+herunterladen.
+
+* `tudcolory.sty`: Farbschemata der TU Dresden
+* `apa.csl`: Bibliographie-Stil nach American Psychological Association (APA)
+* `references.bib` ist ein Beispiel für eine Literaturdatenbank im BibTex-Format. 
+Man kann sie von Hand erstellen oder aus einem Literaturprogramm exportieren, z.B. [Zotero](https://www.zotero.org/).
+* Die Dateien `pdf-plot.pdf` und `mountains.jpg` sind Beispielgrafiken. 
+Eigene Grafiken können auch in Unterverzeichnissen organisiert werden.
+
 ### Schritt 2: Installiere das TUD-Script-Paket
 
 * Nicht erforderlich für die Word-Version und die Quarto-Basic-version.
