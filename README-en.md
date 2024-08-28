@@ -49,7 +49,7 @@ The templates are based on the LaTeX package "TUD-Script" by Falk Hanisch (https
 
 Please download always the complete folder, not only the `template-*` file.
 
-* `tudcolory.sty`: Color schemes of the TU Dresden
+* `tudcolors.sty`: Color schemes of the TU Dresden
 * `apa.csl`: Bibliography style according to the American Psychological Association (APA)
 * `references.bib` is an example of a literature database in BibTex format. 
 It can be created by hand or exported from a literature program, e.g. [Zotero](https://www.zotero.org/).

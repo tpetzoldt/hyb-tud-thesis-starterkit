@@ -42,7 +42,7 @@ Zusätzlich zur `template-*`-Datei sind bei LaTeX und Quarto gegebenenfalls
 weitere Dateien erforderlich. Deshalb bitte immer einen ganzen Ordner 
 herunterladen.
 
-* `tudcolory.sty`: Farbschemata der TU Dresden
+* `tudcolors.sty`: Farbschemata der TU Dresden
 * `apa.csl`: Bibliographie-Stil nach American Psychological Association (APA)
 * `references.bib` ist ein Beispiel für eine Literaturdatenbank im BibTex-Format. 
 Man kann sie von Hand erstellen oder aus einem Literaturprogramm exportieren, z.B. [Zotero](https://www.zotero.org/).
