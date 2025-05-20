@@ -5,9 +5,9 @@
 
 **Welcome to the hyb-tud-thesis-starterkit!**
 
-This repository offers a collection of templates for bachelor, master and internship theses, by example of standards of hydrobiology at the TU Dresden. The templates can of course also be used for other degree programs. Ask your supervisor about the applicable rules.
+## For the impatient Microsoft Word user
 
-The templates are based on the LaTeX package "TUD-Script" by Falk Hanisch (https://www.ctan.org/pkg/tudscr) to support a consistent style according to the university's corporate design.
+* Download the file [template-praktikumsbericht-einfach.docx](https://github.com/tpetzoldt/hyb-tud-thesis-starterkit/raw/refs/heads/main/word/template-praktikumsbericht-einfach.docx) and start writing.
 
 
 ## Why this repository?
@@ -17,10 +17,39 @@ The templates are based on the LaTeX package "TUD-Script" by Falk Hanisch (https
 * **Flexibility:** The templates can be adapted to your individual needs.
 * **Open Source:** Share your improvements with the community and benefit from the contributions of others.
 
-## Contents
+This repository offers a collection of templates for bachelor, master and internship theses, by example of standards of hydrobiology at the TU Dresden. The templates can of course also be used for other degree programs. Ask your supervisor about the applicable rules.
+
+The templates are based on the corporate design of TU Dresden (in Word format) and the LaTeX package 'TUD-Script' by Falk Hanisch (https://www.ctan.org/pkg/tudscr), in order to maintain a consistent style.
+
+## Which word processing tool should I use?
+
+
+There are various word processing programs to choose from for your student research projects. Here are some recommendations to help you decide:
+
+### Microsoft Word
+
+If you are familiar with Microsoft Word, you can simply download the corresponding Word file and edit it. Word is widely used and offers an intuitive user interface.
+
+### LaTeX and Quarto for professional layout
+
+For a more professional layout and additional functionality, LaTeX and Quarto are excellent options. 
+Both systems allow precise control over the appearance of your document.
+
+**Quarto is the most modern system**
+
+* Easy to learn: Compared to LaTeX, Quarto is easier and faster to learn.
+* Reproducible and portable: Your documents can be reproduced and shared on different systems.
+* Integration of R and Python graphics and tables: you can embed R and Python code directly into your document to create graphics and tables dynamically. This is especially useful when writing data-intensive work.
+
+**Important tip**
+
+Be sure to discuss your choice of text program with your supervisor. They can make specific recommendations and support you with your chosen tool.
+
+
+## Which format to use?
 
 * **Word template:** 
-    * A pragmatic style sheet, based on the Word template of the TU Dresden CD (Corporate Design).
+    * A pragmatic outline, based on the Word template of the TU Dresden CD (Corporate Design).
 * **LaTeX templates:** 
     * Configured LaTeX templates, for seminar papers and theses 
     * `template-article-basic.tex` contains a cover page that is intentionally kept simple.
@@ -29,8 +58,9 @@ The templates are based on the LaTeX package "TUD-Script" by Falk Hanisch (https
     * The template `template-quarto-basic` is particularly easy to use and only requires R and Rstudio. It is a good place to start writing. A cover page can be added later.
     * The template `template-quarto-koma-script.qmd` is based on the article template `scrartcl` from the KOMA-Script package.
     * The template `template-quarto-tud-script.qmd` is based on the tud-script LaTeX template, but is easier to use and allows the embedding of R, Python and Julia code. It contains all the important elements of a scientific paper (cover page, table of contents, list of figures, bibliography).
+    
 
-## Installation
+## Installation of the LaTeX and Quarto templates
 
 ### Step 1: Download the files.
 
