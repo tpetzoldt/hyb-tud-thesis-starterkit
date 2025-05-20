@@ -2,12 +2,9 @@
 
 # hyb-tud-thesis-starterkit
 
+Dieses Repository enthält eine Sammlung von Vorlagen für Bachelor-, Master- und Praktikumsarbeiten, am Beispiel der Anforderungen der Hydrobiologie an der TU Dresden. Die Vorlagen können selbstverständlich auch für andere Studiengänge verwendet werden. Informiere dich bei deiner Betreuerin oder Betreuer nach den jeweils geltenden Regeln.
 
-Dieses Repository enth#lt eine Sammlung von Vorlagen für Bachelor-, Master- und Praktikumsarbeiten, am Beispiel der Anforderungen der Hydrobiologie an der TU Dresden. Die Vorlagen können selbstverständlich auch für andere Studiengänge verwendet werden. Informiere dich bei deiner Betreuerin oder Betreuer nach den jeweils geltenden Regeln.
-
-## Für eilige Microsoft Word-Nutzer
-
-* Datei [template-praktikumsbericht-einfach.docx](https://github.com/tpetzoldt/hyb-tud-thesis-starterkit/raw/refs/heads/main/word/template-praktikumsbericht-einfach.docx) herunterladen und mit dem Schreiben anfangen.
+Die Vorlagen basieren auf dem Corporate Design der TU Dresden (Word-Vorlage) bzw. dem LaTeX-Paket "TUD-Script" von Falk Hanisch (https://www.ctan.org/pkg/tudscr) und gewährleisten eine konsistente Gestaltung in Anlehnung an das Corporate Design der Universität.
 
 ## Warum dieses Repository?
 
@@ -16,7 +13,6 @@ Dieses Repository enth#lt eine Sammlung von Vorlagen für Bachelor-, Master- und
 * **Flexibilität:** Die Vorlagen können an deine individuellen Bedürfnisse angepasst werden.
 * **Open Source:** Teile deine Verbesserungen mit der Community und profitiere von den Beiträgen anderer.
 
-Die Vorlagen basieren auf dem Corporate Design der TU Dresden (Word-Vorlage) bzw. dem LaTeX-Paket "TUD-Script" von Falk Hanisch (https://www.ctan.org/pkg/tudscr) und gewährleisten eine konsistente Gestaltung in Anlehnung an das Corporate Design der Universität.
 
 ## Welche Textverarbeitung verwenden?
 
@@ -24,18 +20,22 @@ Für deine Studienarbeiten stehen verschiedene Textverarbeitungsprogramme zur Au
 
 ### Microsoft Word
 
-Wenn du mit Microsoft Word vertraut bist, kannst du einfach die entsprechende Word-Datei herunterladen und bearbeiten. Word ist weit verbreitet und bietet eine intuitive Benutzeroberfläche.
+Wenn du mit Microsoft Word vertraut bist, kannst du einfach die entsprechende [Word-Datei (template-praktikumsbericht-einfach.docx)](https://github.com/tpetzoldt/hyb-tud-thesis-starterkit/raw/refs/heads/main/word/template-praktikumsbericht-einfach.docx) herunterladen und bearbeiten. Word ist weit verbreitet und bietet eine intuitive Benutzeroberfläche.
+
+### LibreOffice
+
+Ist eine kostenlose und quelloffene Alternative und mit gängigen Dateiformaten weitgehend kompatibel. Es läuft unter Windows und auch auf Linux und iOS.
+
 
 ### LaTeX und Quarto für professionelles Layout
 
 Für ein professionelleres Layout und zusätzliche Funktionalität sind LaTeX und Quarto hervorragende Optionen. 
-Beide Systeme ermöglichen eine präzise Kontrolle über das Erscheinungsbild deines Dokuments.
 
 **Quarto ist dabei das modernste System**
 
-* Leicht zu lernen: Im Vergleich zu LaTeX ist Quarto einfacher und schneller zu erlernen.
-* Reproduzierbar und portabel: Deine Dokumente lassen auf verschiedenen Systemen reproduzieren und teilen.
-* Integration von R- und Python-Grafiken und Tabellen: du kannst R- und Python-Code direkt in dein Dokument einbetten, um Grafiken und Tabellen dynamisch zu erstellen. Das ist besonders nützlich, wenn du datenintensive Arbeiten schreibst.
+* Im Vergleich zu LaTeX ist Quarto schneller zu erlernen.
+* Deine Dokumente lassen auf verschiedenen Systemen reproduzieren und teilen.
+* Du kannst R- und Python-Code direkt in dein Dokument einbetten, um Grafiken und Tabellen dynamisch zu erstellen. Das ist besonders nützlich, wenn du datenintensive Arbeiten schreibst.
 
 **Wichtiger Tipp**
 

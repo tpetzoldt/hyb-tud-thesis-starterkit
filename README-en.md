@@ -2,13 +2,9 @@
 
 # hyb-tud-thesis-starterkit
 
+This repository offers a collection of templates for bachelor, master and internship theses, by example of standards of hydrobiology at the TU Dresden. The templates can of course also be used for other degree programs. Ask your supervisor about the applicable rules.
 
-**Welcome to the hyb-tud-thesis-starterkit!**
-
-## For the impatient Microsoft Word user
-
-* Download the file [template-praktikumsbericht-einfach.docx](https://github.com/tpetzoldt/hyb-tud-thesis-starterkit/raw/refs/heads/main/word/template-praktikumsbericht-einfach.docx) and start writing.
-
+The templates are based on the corporate design of TU Dresden (in Word format) and the LaTeX package 'TUD-Script' by Falk Hanisch (https://www.ctan.org/pkg/tudscr), in order to maintain a consistent style.
 
 ## Why this repository?
 
@@ -17,36 +13,35 @@
 * **Flexibility:** The templates can be adapted to your individual needs.
 * **Open Source:** Share your improvements with the community and benefit from the contributions of others.
 
-This repository offers a collection of templates for bachelor, master and internship theses, by example of standards of hydrobiology at the TU Dresden. The templates can of course also be used for other degree programs. Ask your supervisor about the applicable rules.
-
-The templates are based on the corporate design of TU Dresden (in Word format) and the LaTeX package 'TUD-Script' by Falk Hanisch (https://www.ctan.org/pkg/tudscr), in order to maintain a consistent style.
-
 ## Which word processing tool should I use?
-
 
 There are various word processing programs to choose from for your student research projects. Here are some recommendations to help you decide:
 
 ### Microsoft Word
 
-If you are familiar with Microsoft Word, you can simply download the corresponding Word file and edit it. Word is widely used and offers an intuitive user interface.
+If you are familiar with Microsoft Word, you can simply download the corresponding [Word file (template-praktikumsbericht-einfach.docx)](https://github.com/tpetzoldt/hyb-tud-thesis-starterkit/raw/refs/heads/main/word/template-praktikumsbericht-einfach.docx) and edit it. Word is widely used and offers an intuitive user interface.
+
+### LibreOffice
+
+Is a free and open-source office suite that offers a comprehensive alternative and is compatible with common file formats. It runs on Windows, Linux and iOS.
+
 
 ### LaTeX and Quarto for professional layout
 
 For a more professional layout and additional functionality, LaTeX and Quarto are excellent options. 
-Both systems allow precise control over the appearance of your document.
 
 **Quarto is the most modern system**
 
-* Easy to learn: Compared to LaTeX, Quarto is easier and faster to learn.
-* Reproducible and portable: Your documents can be reproduced and shared on different systems.
-* Integration of R and Python graphics and tables: you can embed R and Python code directly into your document to create graphics and tables dynamically. This is especially useful when writing data-intensive work.
+* Compared to LaTeX, Quarto is easier and faster to learn.
+* Your documents can be reproduced and shared on different systems.
+* You can embed R and Python code directly into your document to create graphics and tables dynamically. This is especially useful when writing data-intensive work.
 
 **Important tip**
 
 Be sure to discuss your choice of text program with your supervisor. They can make specific recommendations and support you with your chosen tool.
 
 
-## Which format to use?
+## Which template to use?
 
 * **Word template:** 
     * A pragmatic outline, based on the Word template of the TU Dresden CD (Corporate Design).
@@ -86,8 +81,7 @@ It can be created by hand or exported from a literature program, e.g. [Zotero](h
 * The files `pdf-plot.pdf` and `mountains.jpg` are example graphics. 
 Your own graphics can also be organized in subdirectories.
 
-Translated with DeepL.com (free version)    
-    
+
 ### Step 4: Open the template file
 
 * Make a copy of the template file (recognizable by “template-” in the name)
