@@ -1,7 +1,7 @@
-## Vorlage mit neuem Logo (ab September 2025)
+## Vorlage mit klassischem achteckigen Logo
 
 Die Vorlage "template-praktikumsbericht-einfach.docx" basiert auf der Vorlage
-"250919_Allgemeine_Wordvorlage_DIN_A4.docx" des Corporate Designs der TU Dresden.
+"TUD_Deckblatt_weiss.docx" des Corporate Designs der TU Dresden.
 
 Die Vorlage ist bewusst einfach gehalten und muss jeweils individuell
 angepasst werden.
