@@ -45,15 +45,15 @@ Besprich die Auswahl des Textprogramms unbedingt mit deiner Betreuerin oder dein
 ## Welche Formatvorlage wofür?
 
 * **Word-Vorlage:** 
-    * Eine pragmatische Formatvorlage, basierend auf der Word-Vorlage des TU-Dresden CD (Corporate Design).
+    * Eine pragmatische Formatvorlage, die TU-Dresden CD (Corporate Design) nachbildet.
 * **LaTeX-Vorlagen:** 
     * Konfigurierte LaTeX-Vorlagen, für Seminar- und Abschlussarbeiten 
     * `template-article-basic.tex` enthält ein Deckblatt, ist aber absichtlich einfach gehalten.
-    * `template-tud-script.tex` basiert auf dem tud-script-Paket und enthält alle wesentlichen Elemente einer wissenschaftlichen Arbeit.
+    * `template-tudcd-scr.tex` basiert auf dem neuen tudcdreprt-Paket und enthält alle wesentlichen Elemente einer wissenschaftlichen Arbeit.
 * **Quarto-Vorlagen:** 
     * Die Vorlage `template-quarto-basic` ist besonders einfach zu nutzen und benötigt nur R und Rstudio. Sie eignet sich gut, um mit dem Schreiben anzufangen. Ein Deckblatt kan später hinzugefügt werden.
     * Die Vorlage `template-quarto-koma-script.qmd` basiert auf der Artikelvorlage `scrartcl` aus dem KOMA-Script-Paket.
-    * Die Vorlage `template-quarto-tud-script.qmd` basiert auf der tud-script LaTeX-Vorlage, ist aber einfacher zu nutzen und erlaubt die Einbettung von R-, Python- und Julia-Code. Sie enthält alle wichtigen Elemente einer wissenschaftlichen Arbeit (Deckblatt, Inhaltsverzeichnis, Abbildungsverzeichnis, Literaturverzeichnis).
+    * Die Vorlage `template-quarto-tud-script.qmd` basiert noch auf der **veralteten** tud-script LaTeX-Vorlage. Eine Anpassung an das neue CD erfolgt bei Bedarf.
 
 
 ## Installation der LaTeX und Quarto-Vorlagen
@@ -76,15 +76,15 @@ Man kann sie von Hand erstellen oder aus einem Literaturprogramm exportieren, z.
 * Die Dateien `pdf-plot.pdf` und `mountains.jpg` sind Beispielgrafiken. 
 Eigene Grafiken können auch in Unterverzeichnissen organisiert werden.
 
-### Schritt 2: Installiere das TUD-Script-Paket
+### Schritt 2: Installiere das TUD-CD-Paket
 
-* Nicht erforderlich für die Word-Version und die Quarto-Basic-version.
+* Nicht erforderlich für die Word-Version und die Quarto-Basic-Version.
 * Voraussetzung für die Latex-Versionen und die Markdown-Versionen außer Quarto-Basic:
     * Installiere zunächst eine Tex-Umgebung, z.B. Texlive, Miktex oder tinytex
-    * Nutze den Paketmanager von TexLive oder Miktex und installiere das Paket **tudscr**
-    * Die Dokumentation dazu findet sich auf: https://github.com/tud-cd/tudscr
+    * Installiere das Paket **tudcd-scr**
+    * Die Klassen und die Dokumentation dazu befinden sich sich auf: https://github.com/tud-cd/tudcd-scr
     
-### Schritt 4: Öffne die Vorlagendatei
+### Schritt 3: Öffne die Vorlagendatei
 
 * Fertige eine Kopie der Vorlagendatei an (erkennbar an "template-" im Namen)
 * Öffne die Datei in Word, TexStudio oder RStudio

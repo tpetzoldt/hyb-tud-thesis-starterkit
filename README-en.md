@@ -52,7 +52,7 @@ Be sure to discuss your choice of text program with your supervisor. They can ma
 * **Quarto templates:**
     * The template `template-quarto-basic` is particularly easy to use and only requires R and Rstudio. It is a good place to start writing. A cover page can be added later.
     * The template `template-quarto-koma-script.qmd` is based on the article template `scrartcl` from the KOMA-Script package.
-    * The template `template-quarto-tud-script.qmd` is based on the tud-script LaTeX template, but is easier to use and allows the embedding of R, Python and Julia code. It contains all the important elements of a scientific paper (cover page, table of contents, list of figures, bibliography).
+    * The template `template-quarto-tud-script.qmd` is based on the **outdated** tud-script LaTeX template. Update to the new version can be done upon request.
     
 
 ## Installation of the LaTeX and Quarto templates
@@ -62,13 +62,12 @@ Be sure to discuss your choice of text program with your supervisor. They can ma
 * Download the entire repository or part of it as a ZIP file using the **Code** button.
 * Experts can clone the repository with `git`.
 
-### Step 2: Install the TUD script package
+### Step 2: Install the TUD-CD-package
 
 * Not required for the Word version and the Quarto Basic version.
 * Required for the Latex versions and the Markdown versions except Quarto-Basic:
     * First install a Tex environment, e.g. Texlive, Miktex or tinytex
-    * Use the package manager of TexLive or Miktex and install the package **tudscr**
-    * The documentation can be found at: https://github.com/tud-cd/tudscr
+    * The style files and documentation can be found at: https://github.com/tud-cd/tudcd-scr
     
 **Important:** 
 
