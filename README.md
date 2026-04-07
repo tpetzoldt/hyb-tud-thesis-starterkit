@@ -4,7 +4,7 @@
 
 Dieses Repository enthält eine Sammlung von Vorlagen für Bachelor-, Master- und Praktikumsarbeiten, am Beispiel der Anforderungen der Hydrobiologie an der TU Dresden. Die Vorlagen können selbstverständlich auch für andere Studiengänge verwendet werden. Informiere dich bei deiner Betreuerin oder Betreuer nach den jeweils geltenden Regeln.
 
-Die Vorlagen basieren auf dem Corporate Design der TU Dresden (Word-Vorlage) bzw. dem LaTeX-Paket "TUD-Script" von Falk Hanisch (https://www.ctan.org/pkg/tudscr) und gewährleisten eine konsistente Gestaltung in Anlehnung an das Corporate Design der Universität.
+Die Vorlagen basieren auf dem Corporate Design der TU Dresden (Word-Vorlage) und dem offiziellen dem LaTeX-Paket tudcd-scr  (https://github.com/tud-cd/tudcd-scr/) und gewährleisten eine konsistente Gestaltung in Anlehnung an das Corporate Design der Universität.
 
 ## Warum dieses Repository?
 

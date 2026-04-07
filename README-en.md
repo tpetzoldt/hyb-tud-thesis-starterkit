@@ -4,7 +4,7 @@
 
 This repository offers a collection of templates for bachelor, master and internship theses, by example of standards of hydrobiology at the TU Dresden. The templates can of course also be used for other degree programs. Ask your supervisor about the applicable rules.
 
-The templates are based on the corporate design of TU Dresden (in Word format) and the LaTeX package 'TUD-Script' by Falk Hanisch (https://www.ctan.org/pkg/tudscr), in order to maintain a consistent style.
+The templates are based on the corporate design of TU Dresden (in Word format) and the official LaTeX package tudcd-scr  (https://github.com/tud-cd/tudcd-scr/), in order to maintain a consistent style.
 
 ## Why this repository?
 
